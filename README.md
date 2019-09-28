@@ -1,7 +1,6 @@
-# procrast
+# ☕ procrast
 
-## Start
-Run
+## Run
 
 `npm i`
 
