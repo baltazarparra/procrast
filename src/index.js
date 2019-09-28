@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from 'react-dom'
 import App from './App'
-import Store from './Store'
+import Store from './Stores/Store'
 
 const Index = () => (
   <Store>
