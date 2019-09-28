@@ -7,6 +7,10 @@ import { Reset } from 'styled-reset'
 const Wrapper = styled.div`
   overflow-y: hidden;
   height: 100vh;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 `
 
 export default function App() {

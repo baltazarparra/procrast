@@ -7,6 +7,10 @@ const Header = styled.header`
     justify-content: space-between;
     line-height: 2.4;
     border-bottom: solid 1px #ddd;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
 `
 const MenuButton = styled.a`
     font-family: sans-serif;
@@ -14,6 +18,10 @@ const MenuButton = styled.a`
     text-decoration: none;
     padding-right: 1.4em;
     color: #666;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
     
 `
 
@@ -22,6 +30,13 @@ const Title = styled.h3`
     font-size: 1.4em;
     padding-left: 1.4em;
     color: #666;
+
+    @media (min-width: 768px) {
+        font-size: 1.4em;
+        font-weight: bold;
+        padding-left: .6em;
+        line-height: 2;
+    }
 `
 
 const Nav = styled.nav`
@@ -46,6 +61,23 @@ const Nav = styled.nav`
         transform-origin: bottom left;
         transition: right 1s;
     }
+
+    @media (min-width: 768px) {
+        position: inherit;
+        flex: 1;
+        text-align: left;
+        padding: 1.2em;
+        margin: 0;
+        line-height: 1;
+
+        &:not(:target) {
+            transform: translateX(0);
+        }
+        
+        &:target {
+            transform: translateX(0);
+        }
+    }
 `
 
 const ListItem = styled.li`
@@ -60,6 +92,12 @@ const ListItem = styled.li`
     &:hover {
         box-shadow: 0 3px 4px rgba(0,0,0,0.03), 0 2px 4px rgba(0,0,0,0.04);
         text-shadow: 0 3px 4px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.18);
+    }
+
+    @media (min-width: 768px) {
+        display: block;
+        margin: 0;
+        padding: .8em;
     }
 `
 
@@ -81,10 +119,13 @@ const Navigation = () => {
     return (
         <>
         <Header>
-            <Title>Procrast</Title>
+            <Title>
+                <span role="img" aria-label="coffe">☕</span>Procrast
+            </Title>
             <MenuButton href="#nav">☰Menu</MenuButton>
         </Header>
         <Nav id="nav">
+            <Title>Procrast</Title>
             <MenuButton href="https://baltazarparra.github.io/procrast/#">☰Close</MenuButton>
             <ul>
                 <ListItem onClick={() => handleList('hn')}>

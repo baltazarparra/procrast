@@ -8,6 +8,10 @@ const List = styled.ul`
   background: #f4f4f4;
   overflow: scroll;
   height: 100vh;
+
+  @media (min-width: 768px) {
+    flex: 6;
+  }
 `
 
 const ListItem = styled.li`
