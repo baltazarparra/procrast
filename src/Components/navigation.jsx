@@ -7,6 +7,7 @@ const Header = styled.header`
     justify-content: space-between;
     line-height: 2.4;
     border-bottom: solid 1px #ddd;
+    padding-right: 1em;
 
     @media (min-width: 768px) {
         display: none;
@@ -16,7 +17,7 @@ const MenuButton = styled.a`
     font-family: sans-serif;
     font-size: 1.4em;
     text-decoration: none;
-    padding-right: 1.4em;
+    padding-right: 0;
     color: #666;
 
     @media (min-width: 768px) {
@@ -45,10 +46,10 @@ const Nav = styled.nav`
     right: 0;
     flex: 1;
     height: 100vh;
-    width: 200px;
-    line-height: 2.4;
+    line-height: 2;
     text-align: right;
     background: #eee;
+    padding: .4em 1em 0 4em;
     
     &:not(:target) {
         transform: translateX(100%);
@@ -62,13 +63,21 @@ const Nav = styled.nav`
         transition: right 1s;
     }
 
+    h3 {
+        display: none;
+    }
+
     @media (min-width: 768px) {
         position: inherit;
         flex: 1;
         text-align: left;
-        padding: 1.2em;
+        padding: 1.4em;
         margin: 0;
         line-height: 1;
+
+        h3 {
+            display: block;
+        }
 
         &:not(:target) {
             transform: translateX(0);
@@ -82,8 +91,8 @@ const Nav = styled.nav`
 
 const ListItem = styled.li`
     font-family: sans-serif;
-    margin: 0 .8em;
-    padding: .6em;
+    margin: 0;
+    padding: 0;
     color: #666;
     cursor: pointer;
     box-shadow: 0 0 0 rgba(0,0,0,0.12), 0 0 0 rgba(0,0,0,0.24);
@@ -125,7 +134,9 @@ const Navigation = () => {
             <MenuButton href="#nav">☰Menu</MenuButton>
         </Header>
         <Nav id="nav">
-            <Title>Procrast</Title>
+            <Title>
+                <span role="img" aria-label="coffe">☕</span> Procrast
+            </Title>
             <MenuButton href="https://baltazarparra.github.io/procrast/#">☰Close</MenuButton>
             <ul>
                 <ListItem onClick={() => handleList('hn')}>
