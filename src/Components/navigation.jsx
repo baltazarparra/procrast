@@ -2,15 +2,53 @@ import React, { useContext } from 'react'
 import { PostsContext } from '../Stores/Store'
 import styled from 'styled-components'
 
+const Header = styled.header`
+    display: flex;
+    justify-content: space-between;
+    line-height: 2;
+`
+const MenuButton = styled.a`
+    font-family: sans-serif;
+    font-size: 1.4em;
+    text-decoration: none;
+    padding-right: 1.4em;
+    color: #666;
+    
+`
+
+const Title = styled.h3`
+    font-family: sans-serif;
+    font-size: 1.4em;
+    padding-left: 1.4em;
+    color: #666;
+`
+
 const Nav = styled.nav`
+    position: fixed;
+    top: 0;
+    right: 0;
     flex: 1;
+    height: 100vh;
+    width: 200px;
+    line-height: 2;
+    text-align: right;
     background: #eee;
-    padding: 2em;
+    
+    &:not(:target) {
+        transform: translateX(100%);
+        transition: right 1.5s;
+    }
+    
+    &:target {
+        transform: translateX(0);
+        transform-origin: bottom left;
+        transition: right 1s;
+    }
 `
 
 const ListItem = styled.li`
     font-family: sans-serif;
-    margin: .4em;
+    margin: 0 .8em;
     padding: .6em;
     color: #666;
     cursor: pointer;
@@ -23,9 +61,9 @@ const ListItem = styled.li`
     }
 `
 
-const Title = styled.h2`
-    font-family: sans-serif;
-    font-size: 2em;
+const ListLink = styled.a`
+    text-decoration: none;
+    color: #666;
 `
 
 const Navigation = () => {
@@ -39,19 +77,41 @@ const Navigation = () => {
     }
 
     return (
-        <Nav>
+        <>
+        <Header>
             <Title>Procast</Title>
+            <MenuButton href="#nav">☰Menu</MenuButton>
+        </Header>
+        <Nav id="nav">
+            <MenuButton href="/#">☰Close</MenuButton>
             <ul>
-                <ListItem onClick={() => handleList('hn')}>Hacker News</ListItem>
-                <ListItem onClick={() => handleList('reddit')}>Reddit</ListItem>
-                <ListItem onClick={() => handleList('ph')}>Product Hunt</ListItem>
-                <ListItem onClick={() => handleList('slashdot')}>Slashdot</ListItem>
-                <ListItem onClick={() => handleList('dn')}>Designer News</ListItem>
-                <ListItem onClick={() => handleList('github')}>Github Trending</ListItem>
-                <ListItem onClick={() => handleList('medium')}>Medium</ListItem>
-                <ListItem onClick={() => handleList('lifehacker')}>Lifehacker</ListItem>
+                <ListItem onClick={() => handleList('hn')}>
+                    <ListLink href="/#">Hacker News</ListLink>
+                </ListItem>
+                <ListItem onClick={() => handleList('reddit')}>
+                    <ListLink href="/#">Reddit</ListLink>
+                </ListItem>
+                <ListItem onClick={() => handleList('ph')}>
+                    <ListLink href="/#">Product Hunt</ListLink>
+                </ListItem>
+                <ListItem onClick={() => handleList('slashdot')}>
+                    <ListLink href="/#">Slashdot</ListLink>
+                </ListItem>
+                <ListItem onClick={() => handleList('dn')}>
+                    <ListLink href="/#">Designer News</ListLink>
+                </ListItem>
+                <ListItem onClick={() => handleList('github')}>
+                    <ListLink href="/#">Github Trending</ListLink>
+                </ListItem>
+                <ListItem onClick={() => handleList('medium')}>
+                    <ListLink href="/#">Medium</ListLink>
+                </ListItem>
+                <ListItem onClick={() => handleList('lifehacker')}>
+                    <ListLink href="/#">Lifehacker</ListLink>
+                </ListItem>
             </ul>
         </Nav>
+        </>
     )
 }
 

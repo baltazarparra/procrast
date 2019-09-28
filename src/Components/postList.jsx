@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { Reset } from 'styled-reset'
 
 const List = styled.ul`
-  flex: 7;
   padding: 1em;
   background: #f4f4f4;
   overflow: scroll;
