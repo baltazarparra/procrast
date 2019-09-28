@@ -81,7 +81,7 @@ const Navigation = () => {
     return (
         <>
         <Header>
-            <Title>Procast</Title>
+            <Title>Procrast</Title>
             <MenuButton href="#nav">☰Menu</MenuButton>
         </Header>
         <Nav id="nav">
