@@ -10,10 +10,10 @@ export default function Store({children}) {
         async function fetchData() {
             const response = await fetch('https://www.reader.one/api/all/hn,reddit,ph,slashdot,dn,github,medium,lifehacker?limit=3')
             const data = await response.json()
-
+            
             setPost(data)
         }
-
+        
         fetchData()
     }, [])
 

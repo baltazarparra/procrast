@@ -15,7 +15,10 @@ const List = styled.ul`
 `
 
 const ListItem = styled.li`
-  margin: 1em;
+  padding: 1em;
+  &:hover {
+    background-color: #eee;
+  }
 `
 
 const Link = styled.a`
@@ -43,10 +46,11 @@ const Sub = styled.p`
 
 const PostList = () => {
     const [post] = useContext(PostsContext)
+
     return (
       <List>
         <Reset />
-        {post.map(post => <ListItem key={Math.random()}>
+        {post.map((post, index) => <ListItem key={index}>
           <Link href={post.url}>{post.title}</Link>
           { post.author &&
             <Sub>Author: {post.author}</Sub>
