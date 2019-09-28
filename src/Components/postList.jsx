@@ -4,8 +4,11 @@ import styled from 'styled-components'
 import { Reset } from 'styled-reset'
 
 const List = styled.ul`
+  flex: 7;
   padding: 1em;
   background: #f4f4f4;
+  overflow: scroll;
+  height: 100vh;
 `
 
 const ListItem = styled.li`
@@ -38,31 +41,29 @@ const Sub = styled.p`
 const PostList = () => {
     const [post] = useContext(PostsContext)
     return (
-      <>
-        <List>
-          <Reset />
-          {post.map(post => <ListItem key={Math.random()}>
-            <Link href={post.url}>{post.title}</Link>
-            { post.author &&
-              <Sub>Author: {post.author}</Sub>
-            }
-            { post.score && <Sub>Score: {post.score}</Sub> }
-            { post.comments > 0 && 
+      <List>
+        <Reset />
+        {post.map(post => <ListItem key={Math.random()}>
+          <Link href={post.url}>{post.title}</Link>
+          { post.author &&
+            <Sub>Author: {post.author}</Sub>
+          }
+          { post.score && <Sub>Score: {post.score}</Sub> }
+          { post.comments > 0 && 
+            <Sub>
+              <a href={post.comment_link}>
+                <span>{post.comments}</span> comments
+              </a>
+            </Sub>
+          }
+          {
+              post.one_sources[0] &&
               <Sub>
-                <a href={post.comment_link}>
-                  <span>{post.comments}</span> comments
-                </a>
+                  <b>source: {post.one_sources[0]}</b>
               </Sub>
-            }
-            {
-                post.one_sources[0] &&
-                <Sub>
-                    <b>source: {post.one_sources[0]}</b>
-                </Sub>
-            }
-          </ListItem>)}
-        </List>
-      </>
+          }
+        </ListItem>)}
+      </List>
     )
 }
 
