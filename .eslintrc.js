@@ -4,6 +4,7 @@ module.exports = {
         "es6": true
     },
     "extends": [
+        "eslint:recommended",
         "plugin:react/recommended"
     ],
     "globals": {
@@ -18,8 +19,12 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "react-hooks"
     ],
     "rules": {
+        "react/prop-types": 0,
+        "react-hooks/rules-of-hooks": 'error',
+        "react-hooks/exhaustive-deps": 'warn'
     }
 };

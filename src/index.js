@@ -1,5 +1,12 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
 import App from './App'
+import Store from './Store'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+const Index = () => (
+  <Store>
+    <App />
+  </Store>
+)
+
+render(<Index />, document.getElementById('root'))
