@@ -5,7 +5,8 @@ import styled from 'styled-components'
 const Header = styled.header`
     display: flex;
     justify-content: space-between;
-    line-height: 2;
+    line-height: 2.4;
+    border-bottom: solid 1px #ddd;
 `
 const MenuButton = styled.a`
     font-family: sans-serif;
@@ -30,13 +31,14 @@ const Nav = styled.nav`
     flex: 1;
     height: 100vh;
     width: 200px;
-    line-height: 2;
+    line-height: 2.4;
     text-align: right;
     background: #eee;
     
     &:not(:target) {
         transform: translateX(100%);
         transition: right 1.5s;
+        box-shadow: 0 0 0 rgba(0,0,0,0.12), 0 0 0 rgba(0,0,0,0.24);
     }
     
     &:target {
@@ -83,31 +85,31 @@ const Navigation = () => {
             <MenuButton href="#nav">☰Menu</MenuButton>
         </Header>
         <Nav id="nav">
-            <MenuButton href="/#">☰Close</MenuButton>
+            <MenuButton href="https://baltazarparra.github.io/procrast/#">☰Close</MenuButton>
             <ul>
                 <ListItem onClick={() => handleList('hn')}>
-                    <ListLink href="/#">Hacker News</ListLink>
+                    <ListLink href="https://baltazarparra.github.io/procrast/#">Hacker News</ListLink>
                 </ListItem>
                 <ListItem onClick={() => handleList('reddit')}>
-                    <ListLink href="/#">Reddit</ListLink>
+                    <ListLink href="https://baltazarparra.github.io/procrast/#">Reddit</ListLink>
                 </ListItem>
                 <ListItem onClick={() => handleList('ph')}>
-                    <ListLink href="/#">Product Hunt</ListLink>
+                    <ListLink href="https://baltazarparra.github.io/procrast/#">Product Hunt</ListLink>
                 </ListItem>
                 <ListItem onClick={() => handleList('slashdot')}>
-                    <ListLink href="/#">Slashdot</ListLink>
+                    <ListLink href="https://baltazarparra.github.io/procrast/#">Slashdot</ListLink>
                 </ListItem>
                 <ListItem onClick={() => handleList('dn')}>
-                    <ListLink href="/#">Designer News</ListLink>
+                    <ListLink href="https://baltazarparra.github.io/procrast/#">Designer News</ListLink>
                 </ListItem>
                 <ListItem onClick={() => handleList('github')}>
-                    <ListLink href="/#">Github Trending</ListLink>
+                    <ListLink href="https://baltazarparra.github.io/procrast/#">Github Trending</ListLink>
                 </ListItem>
                 <ListItem onClick={() => handleList('medium')}>
-                    <ListLink href="/#">Medium</ListLink>
+                    <ListLink href="https://baltazarparra.github.io/procrast/#">Medium</ListLink>
                 </ListItem>
                 <ListItem onClick={() => handleList('lifehacker')}>
-                    <ListLink href="/#">Lifehacker</ListLink>
+                    <ListLink href="https://baltazarparra.github.io/procrast/#">Lifehacker</ListLink>
                 </ListItem>
             </ul>
         </Nav>
