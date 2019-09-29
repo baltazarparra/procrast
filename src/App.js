@@ -17,10 +17,10 @@ const Wrapper = styled.div`
 export default function App() {
   return (
     <Wrapper>
+      <Lines color="#ccc" background="#333"/>
       <Reset />
       <Nav />
       <PostList />
-      <Lines color="#ccc" background="#333"/>
     </Wrapper>
   )
 }
