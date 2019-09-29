@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/procrast/static/js/main.54ebccc5.chunk.js",
-    "main.js.map": "/procrast/static/js/main.54ebccc5.chunk.js.map",
+    "main.js": "/procrast/static/js/main.0fd9848b.chunk.js",
+    "main.js.map": "/procrast/static/js/main.0fd9848b.chunk.js.map",
     "runtime-main.js": "/procrast/static/js/runtime-main.2bddf4ec.js",
     "runtime-main.js.map": "/procrast/static/js/runtime-main.2bddf4ec.js.map",
     "static/js/2.3b3e3a45.chunk.js": "/procrast/static/js/2.3b3e3a45.chunk.js",
     "static/js/2.3b3e3a45.chunk.js.map": "/procrast/static/js/2.3b3e3a45.chunk.js.map",
     "index.html": "/procrast/index.html",
-    "precache-manifest.8d9e4f7a1418c83886cc4e483f45919e.js": "/procrast/precache-manifest.8d9e4f7a1418c83886cc4e483f45919e.js",
+    "precache-manifest.f98938dcb6ea30ae5a0df227339cf53a.js": "/procrast/precache-manifest.f98938dcb6ea30ae5a0df227339cf53a.js",
     "service-worker.js": "/procrast/service-worker.js"
   }
 }
