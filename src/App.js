@@ -3,7 +3,6 @@ import PostList from './Components/postList'
 import Nav from './Components/navigation'
 import styled from 'styled-components'
 import { Reset } from 'styled-reset'
-import { Lines } from 'react-preloaders'
 
 const Wrapper = styled.div`
   overflow-y: hidden;
@@ -16,13 +15,10 @@ const Wrapper = styled.div`
 
 export default function App() {
   return (
-    <React.Fragment>
-      <Wrapper>
-        <Reset />
-        <Nav />
-        <PostList />
-      <Lines background="blur"/>
-      </Wrapper>
-    </React.Fragment>
+    <Wrapper>
+      <Reset />
+      <Nav />
+      <PostList />
+    </Wrapper>
   )
 }
