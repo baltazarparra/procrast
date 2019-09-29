@@ -51,26 +51,28 @@ const PostList = () => {
   return (
     <List>
       <Reset />
-      {post.map((post, index) => <ListItem key={index}>
-        <Link href={post.url}>{post.title}</Link>
-        { post.author &&
-          <Sub>Author: {post.author}</Sub>
-        }
-        { post.score && <Sub>Score: {post.score}</Sub> }
-        { post.comments > 0 &&
-          <Sub>
-            <a href={post.comment_link}>
-              <span>{post.comments}</span> comments
-            </a>
-          </Sub>
-        }
-        {
-            post.one_sources[0] &&
+      {post.map((post, index) =>
+        <ListItem key={index}>
+          <Link href={post.url}>{post.title}</Link>
+          { post.author &&
+            <Sub>Author: {post.author}</Sub>
+          }
+          { post.score &&
+            <Sub>Score: {post.score}</Sub>
+          }
+          { post.comments > 0 &&
+            <Sub>
+              <a href={post.comment_link}>
+                <span>{post.comments}</span> comments
+              </a>
+            </Sub>
+          }
+          { post.one_sources[0] &&
             <Sub>
                 <b>source: {post.one_sources[0]}</b>
             </Sub>
-        }
-      </ListItem>)}
+          }
+        </ListItem>)}
     </List>
   )
 }
