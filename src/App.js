@@ -1,6 +1,6 @@
 import React from 'react'
-import PostList from './Components/postList'
-import Nav from './Components/navigation'
+import PostList from './Components/PostList'
+import Nav from './Components/Navigation'
 import styled from 'styled-components'
 import { Reset } from 'styled-reset'
 
