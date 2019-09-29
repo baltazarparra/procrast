@@ -16,11 +16,13 @@ const Wrapper = styled.div`
 
 export default function App() {
   return (
-    <Wrapper>
+    <>
       <Lines color="#ccc" background="#333"/>
-      <Reset />
-      <Nav />
-      <PostList />
-    </Wrapper>
+      <Wrapper>
+        <Reset />
+        <Nav />
+        <PostList />
+      </Wrapper>
+    </>
   )
 }
