@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Header = styled.header`
     display: flex;
     justify-content: space-between;
-    line-height: 2.4;
+    line-height: 2;
     border-bottom: solid 1px #333;
     padding-right: 1em;
     background-color: #666;
@@ -50,7 +50,7 @@ const Nav = styled.nav`
     line-height: 2;
     text-align: right;
     background-color: #666;
-    padding: .4em 1em 0 4em;
+    padding: 0 1em 0 4em;
     
     &:not(:target) {
         transform: translateX(100%);
@@ -128,8 +128,8 @@ const Navigation = () => {
     return (
         <>
             <Header>
-                <Title>
-                    <span role="img" aria-label="coffe">☕</span>Procrast
+                <Title onClick={() => handleList('hn,reddit,ph,slashdot,dn,github,medium,lifehacker')}>
+                    <span role="img" aria-label="coffe">☕</span> Procrast
                 </Title>
                 <MenuButton href="#nav">☰Menu</MenuButton>
             </Header>

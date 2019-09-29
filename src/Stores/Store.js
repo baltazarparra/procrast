@@ -20,6 +20,10 @@ export default function Store({children}) {
         fetchData()
     }, [])
 
+    useEffect(() => {
+        setLoading(false)
+    }, [post])
+
     return (
         <PostsContext.Provider value={[post, setPost]}>
             {children}
