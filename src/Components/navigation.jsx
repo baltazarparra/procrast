@@ -30,7 +30,7 @@ const Title = styled.h3`
     font-family: sans-serif;
     font-size: 1.4em;
     padding-left: 1.4em;
-    color: #666;
+    color: #bbb;
 
     @media (min-width: 768px) {
         font-size: 1.4em;
@@ -48,7 +48,7 @@ const Nav = styled.nav`
     height: 100vh;
     line-height: 2;
     text-align: right;
-    background: #eee;
+    background-color: #666;
     padding: .4em 1em 0 4em;
     
     &:not(:target) {
@@ -93,7 +93,6 @@ const ListItem = styled.li`
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    color: #666;
     cursor: pointer;
     box-shadow: 0 0 0 rgba(0,0,0,0.12), 0 0 0 rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -112,7 +111,7 @@ const ListItem = styled.li`
 
 const ListLink = styled.a`
     text-decoration: none;
-    color: #666;
+    color: #bbb;
 `
 
 const Navigation = () => {

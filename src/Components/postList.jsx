@@ -5,7 +5,7 @@ import { Reset } from 'styled-reset'
 
 const List = styled.ul`
   padding: 1em;
-  background: #f4f4f4;
+  background: #333;
   overflow: scroll;
   height: 100vh;
 
@@ -17,7 +17,7 @@ const List = styled.ul`
 const ListItem = styled.li`
   padding: 1em;
   &:hover {
-    background-color: #eee;
+    background-color: #444;
   }
 `
 
@@ -25,18 +25,18 @@ const Link = styled.a`
   display: block;
   font-family: sans-serif;
   text-decoration: none;
-  color: #333;
+  color: #bbb;
 `
 
 const Sub = styled.p`
   display: inline-block;
   font-family: sans-serif;
   font-size: .8em;
-  color: #666;
+  color: #888;
   padding-right: .4em;
 
   a {
-    color: #666;
+    color: #ccc;
   }
 
   b {
