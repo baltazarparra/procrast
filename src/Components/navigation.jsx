@@ -6,8 +6,9 @@ const Header = styled.header`
     display: flex;
     justify-content: space-between;
     line-height: 2.4;
-    border-bottom: solid 1px #ddd;
+    border-bottom: solid 1px #333;
     padding-right: 1em;
+    background-color: #666;
 
     @media (min-width: 768px) {
         display: none;
@@ -18,7 +19,7 @@ const MenuButton = styled.a`
     font-size: 1.4em;
     text-decoration: none;
     padding-right: 0;
-    color: #666;
+    color: #ccc;
 
     @media (min-width: 768px) {
         display: none;
@@ -30,7 +31,7 @@ const Title = styled.h3`
     font-family: sans-serif;
     font-size: 1.4em;
     padding-left: 1.4em;
-    color: #bbb;
+    color: #ccc;
 
     @media (min-width: 768px) {
         font-size: 1.4em;
@@ -111,7 +112,7 @@ const ListItem = styled.li`
 
 const ListLink = styled.a`
     text-decoration: none;
-    color: #bbb;
+    color: #ccc;
 `
 
 const Navigation = () => {
