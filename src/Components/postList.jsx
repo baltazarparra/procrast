@@ -8,7 +8,7 @@ const List = styled.ul`
   background: #333;
   overflow: scroll;
   height: calc(100vh - 76px);
-  
+
   @media (min-width: 768px) {
     height: 100vh;
     flex: 6;
@@ -46,33 +46,33 @@ const Sub = styled.p`
 `
 
 const PostList = () => {
-    const [post] = useContext(PostsContext)
+  const [post] = useContext(PostsContext)
 
-    return (
-      <List>
-        <Reset />
-        {post.map((post, index) => <ListItem key={index}>
-          <Link href={post.url}>{post.title}</Link>
-          { post.author &&
-            <Sub>Author: {post.author}</Sub>
-          }
-          { post.score && <Sub>Score: {post.score}</Sub> }
-          { post.comments > 0 && 
+  return (
+    <List>
+      <Reset />
+      {post.map((post, index) => <ListItem key={index}>
+        <Link href={post.url}>{post.title}</Link>
+        { post.author &&
+          <Sub>Author: {post.author}</Sub>
+        }
+        { post.score && <Sub>Score: {post.score}</Sub> }
+        { post.comments > 0 &&
+          <Sub>
+            <a href={post.comment_link}>
+              <span>{post.comments}</span> comments
+            </a>
+          </Sub>
+        }
+        {
+            post.one_sources[0] &&
             <Sub>
-              <a href={post.comment_link}>
-                <span>{post.comments}</span> comments
-              </a>
+                <b>source: {post.one_sources[0]}</b>
             </Sub>
-          }
-          {
-              post.one_sources[0] &&
-              <Sub>
-                  <b>source: {post.one_sources[0]}</b>
-              </Sub>
-          }
-        </ListItem>)}
-      </List>
-    )
+        }
+      </ListItem>)}
+    </List>
+  )
 }
 
 export default PostList
