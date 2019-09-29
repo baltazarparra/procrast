@@ -16,13 +16,13 @@ const Wrapper = styled.div`
 
 export default function App() {
   return (
-    <>
-      <Lines color="#ccc" background="#333"/>
+    <React.Fragment>
       <Wrapper>
         <Reset />
         <Nav />
         <PostList />
+      <Lines background="blur"/>
       </Wrapper>
-    </>
+    </React.Fragment>
   )
 }
