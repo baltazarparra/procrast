@@ -7,9 +7,10 @@ const List = styled.ul`
   padding: 1em;
   background: #333;
   overflow: scroll;
-  height: 100vh;
-
+  height: calc(100vh - 76px);
+  
   @media (min-width: 768px) {
+    height: 100vh;
     flex: 6;
   }
 `

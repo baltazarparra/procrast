@@ -119,7 +119,7 @@ const Navigation = () => {
     const [,setPost] = useContext(PostsContext)
 
     async function handleList(source) {
-        const response = await fetch(`https://www.reader.one/api/all/${source}?limit=25`)
+        const response = await fetch(`https://www.reader.one/api/all/${source}?limit=35`)
         const data = await response.json()
 
         setPost(data)
