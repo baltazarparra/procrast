@@ -125,6 +125,17 @@ const Navigation = () => {
         setPost(data)
     }
 
+    const sources = [
+        {source: 'hn', name: 'Haker News'},
+        {source: 'reddit', name: 'Reddit'},
+        {source: 'ph', name: 'Product Hunt'},
+        {source: 'slashdot', name: 'Slashdot'},
+        {source: 'dn', name: 'Design News'},
+        {source: 'github', name: 'Github Trends'},
+        {source: 'medium',  name: 'Medium'},
+        {source: 'lifehacker', name: 'Lifehacker'}
+    ]
+
     return (
         <>
             <Header>
@@ -139,30 +150,12 @@ const Navigation = () => {
                 </Title>
                 <MenuButton href="https://baltazarparra.github.io/procrast/#">☰Close</MenuButton>
                 <ul>
-                    <ListItem onClick={() => handleList('hn')}>
-                        <ListLink href="https://baltazarparra.github.io/procrast/#">Hacker News</ListLink>
-                    </ListItem>
-                    <ListItem onClick={() => handleList('reddit')}>
-                        <ListLink href="https://baltazarparra.github.io/procrast/#">Reddit</ListLink>
-                    </ListItem>
-                    <ListItem onClick={() => handleList('ph')}>
-                        <ListLink href="https://baltazarparra.github.io/procrast/#">Product Hunt</ListLink>
-                    </ListItem>
-                    <ListItem onClick={() => handleList('slashdot')}>
-                        <ListLink href="https://baltazarparra.github.io/procrast/#">Slashdot</ListLink>
-                    </ListItem>
-                    <ListItem onClick={() => handleList('dn')}>
-                        <ListLink href="https://baltazarparra.github.io/procrast/#">Designer News</ListLink>
-                    </ListItem>
-                    <ListItem onClick={() => handleList('github')}>
-                        <ListLink href="https://baltazarparra.github.io/procrast/#">Github Trending</ListLink>
-                    </ListItem>
-                    <ListItem onClick={() => handleList('medium')}>
-                        <ListLink href="https://baltazarparra.github.io/procrast/#">Medium</ListLink>
-                    </ListItem>
-                    <ListItem onClick={() => handleList('lifehacker')}>
-                        <ListLink href="https://baltazarparra.github.io/procrast/#">Lifehacker</ListLink>
-                    </ListItem>
+                    {sources.map((item, index) => (
+                        <ListItem key={index} onClick={() => handleList(item.source)}>
+                            <ListLink href="https://baltazarparra.github.io/procrast/#">
+                                {item.name}
+                            </ListLink>
+                        </ListItem>))}
                 </ul>
             </Nav>
         </>
