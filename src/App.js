@@ -3,6 +3,7 @@ import PostList from './Components/postList'
 import Nav from './Components/navigation'
 import styled from 'styled-components'
 import { Reset } from 'styled-reset'
+import { Lines } from 'react-preloaders'
 
 const Wrapper = styled.div`
   overflow-y: hidden;
@@ -19,6 +20,7 @@ export default function App() {
       <Reset />
       <Nav />
       <PostList />
+      <Lines color="#ccc" background="#333"/>
     </Wrapper>
   )
 }
